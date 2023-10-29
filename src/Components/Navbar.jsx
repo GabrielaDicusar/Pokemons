@@ -12,7 +12,7 @@ function Navbar() {
        
       <div className='rightSide'>
       <li>
-          <Link to="/">PokeDex</Link>
+          <Link to="/pokedex">PokeDex</Link>
         </li>
         <li>
           <Link to="/about">About</Link>

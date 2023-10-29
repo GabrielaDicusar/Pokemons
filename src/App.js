@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route, BrowserRouter } from 'react-rou
 import PokeDex from './pages/PokeDex';
 import About from './pages/About';
 import Navbar from './Components/Navbar';
-import Footer from './Components/Footer';
 import './Components/style.css';
 
 function App() {
@@ -12,8 +11,8 @@ function App() {
     <BrowserRouter>
     <Navbar/>
     <Routes>
-      <Route exact path='/' element={<PokeDex/>}></Route>
-      <Route path="/about" component={<About/>}></Route>
+      <Route exact path="/pokedex" element={<PokeDex/>}></Route>
+      <Route path="/about" element={<About/>}></Route>
     </Routes>
     </BrowserRouter>
     </>

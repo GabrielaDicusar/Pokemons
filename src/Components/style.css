@@ -1,229 +1,309 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 
-*{
-    padding: 0;
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
 }
 
-body{
-    background-color: rgb(165, 170, 218)
+body {
+  background-color: rgb(150, 151, 152);
 }
 
-.container{
-    width: 90%;
-    height: 90vh;
-    padding-bottom: 20px;
-    margin: auto;
-    padding-top: 200px;
-    display: flex; 
+.container {
+  width: 90%;
+  height: 90vh;
+  padding-bottom: 20px;
+  margin: auto;
+  padding-top: 10px;
+  display: flex;
 }
 
-.left-content.right-content{
-    flex: 50%;
+.left-content.right-content {
+  flex: 50%;
+  padding-top: 60px;
+}
+
+.left-content {
+  padding-top: 150px;
+  height: 80vh;
+  width: 25%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 0.5fr));
+  grid-gap: 2rem;
+  padding-left: 100px;
+}
+
+.right-content {
+  width: 40%;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  position: fixed;
+  top: 170px;
+  right: 100px;
+  overflow: hidden;
+  
+}
+
+.badge {
+  padding-top: 150px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10%;
+  overflow: hidden;
+  height: 400px;
+  width: 600px;
+}
+
+.badge::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #dd5353;
+  clip-path: circle(150px at 80% 20%);
+  transition: 0.5s ease-in-out;
+}
+
+.badge:hover::before {
+  clip-path: circle(400px at 80% -20%);
+}
+
+.badge .imgBx{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10000;
+  width: 100%;
+  height: 210px;
+  transition: 1s;
+}
+
+.badge:hover .imgBx{
+  top: 0%;
+  transform: translateY(10%);
+}
+
+.badge .pokeimage{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 270px;
+}
+
+.card {
+  width: 300px;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.image {
+  width: 50px;
+  height: 70px;
+  object-fit: contain;
+}
+
+.right-content img {
+  margin: 2rem;
+  height: 200px;
+  padding-bottom: 1px;
+}
+
+.right-content h1 {
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+
+.infoBx{
+  margin-top: 270px;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  text-align:center;
+  transition: 1s;
+  z-index: 10;
 
 }
 
-.left-content{
-    height: 80vh;
-    width: 25%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px,0.5fr));
-    grid-gap: 2rem;
-    padding-left: 100px;
-    overflow-y: scroll;
+/* .infoBx:hover{
+  height: 210px;
+  
+} */
+
+.abilities {
+  width: 60%;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem;
 }
 
-.right-content{
-    width: 50%;
-    text-align: center;
-    color: black;
-    position: fixed;
-    top: 200px;
-    right: 100px;
-
+.abilities .group {
+  background-color: rgb(203, 25, 25);
+  color: rgb(255, 249, 249);
+  padding: 0.5rem;
+  font-size: 12px;
+  border-radius: 8px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 
-.card{
-    width: 300px;
-    background-color: #ffffff;
-    border-radius: 1rem;
-    box-shadow: 0 5px 5px rgba(0,0,0,0.5);
-    padding: 0 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    box-sizing: border-box;
+.base-set {
+  margin-top: 2rem;
 }
 
-.image{
-    width: 50px;
-    height: 70px;
-    object-fit: contain;
+.btn-group {
+  display: flex;
 }
 
-.right-content img{
-    margin: 2rem;
-    height: 200px;
+.btn-group button {
+  outline: none;
+  border: none;
+  padding: 0.6rem 0;
+  margin: 1rem;
+  font-size: 25px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+  border-radius: 8px;
 }
 
-.right-content h1{
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 1px;
+/*PokFacts*/
+.about {
+  padding-top: 150px;
+}
+.pokemon-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding-top: 50px;
 }
 
-.abilities{
-    width: 80%;
-    margin: auto;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-top: 1rem;
+.aboutTitle {
+  text-align: center;
 }
 
-.abilities .group{
-    background-color: rgb(74, 44, 122);
-    color: white;
-    padding: 0.5rem;
-    font-size: 12px;
-    border-radius: 8px;
-}
-
-.base-set{
-    margin-top: 2rem;
-}
-
-.btn-group{
-    display: flex;
-}
-
-.btn-group button{
-    outline: none;
-    border: none;
-    padding: 0.6rem 0;
-    margin: 1rem;
-    font-size: 25px;
-    font-weight: bold;
-    color: rgb(255, 255, 255);
-    background-color: rgb(24, 70, 122);
-    border-radius: 8px;
-
+.fact-card {
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  background-color: #ffffff;
 }
 
 /*Navbar*/
 .navbar {
-    width: 100%;
-    height: 100px;
-    background-color: #121619;
-    display: flex;
-    flex-direction: row;
-    position: fixed;
-  }
-  
-  .navbar .leftSide {
-    flex: 50%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    padding-left: 150px;
-  }
-  
-  .navbar .leftSide img {
-    width: 70px;
-  }
-  
-  .navbar .rightSide {
-    flex: 50%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .navbar a {
-    color: white;
-    text-decoration: none;
-    margin: 20px;
-  }
-  
-  .navbar .rightSide button {
-    background-color: transparent;
-    border: none;
-    color: white;
-    cursor: pointer;
-  }
-  
-  .navbar .rightSide svg {
-    font-size: 40px;
-  }
-  
-  .navbar #open {
-    padding-left: 0px;
-  }
-  .navbar #open img {
-    display: none;
-  }
-  
-  .navbar #close img {
-    display: inherit;
-  }
-  
-  .navbar #open .hiddenLinks {
-    display: inherit;
-    margin-left: 30px;
-  }
-  
-  .navbar #close .hiddenLinks {
-    display: none;
-  }
-  
-  .navbar #open a {
-    width: 70px;
-    margin: 5px;
-  }
-  @media only screen and (max-width: 900px) {
-    .navbar .rightSide a {
-      width: 70px;
-    }
-    .navbar .leftSide {
-      padding-left: 50px;
-    }
-  }
-  
-  @media only screen and (max-width: 600px) {
-    .navbar .rightSide a {
-      display: none;
-    }
-  
-    .navbar .rightSide {
-      justify-content: flex-end;
-      padding-right: 50px;
-    }
-  
-    .navbar .rightSide button {
-      display: inherit;
-    }
-  }
-  
-  @media only screen and (min-width: 600px) {
-    .navbar .rightSide button {
-      display: none;
-    }
-  
-    .hiddenLinks {
-      display: none;
-    }
+  width: 100%;
+  height: 100px;
+  background-color: #121619;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+}
 
-    /*Footer*/
-    .footer {
-      width: 100%;
-      height: 200px;
-      background-color: #121619;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      padding-top: 10px;
-    }
+.navbar .leftSide {
+  flex: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 150px;
+}
+
+.navbar .leftSide img {
+  width: 70px;
+}
+
+.navbar .rightSide {
+  flex: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 20px;
+}
+
+.navbar .rightSide button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.navbar .rightSide svg {
+  font-size: 40px;
+}
+
+.navbar #open {
+  padding-left: 0px;
+}
+.navbar #open img {
+  display: none;
+}
+
+.navbar #close img {
+  display: inherit;
+}
+
+.navbar #open .hiddenLinks {
+  display: inherit;
+  margin-left: 30px;
+}
+
+.navbar #close .hiddenLinks {
+  display: none;
+}
+
+.navbar #open a {
+  width: 70px;
+  margin: 5px;
+}
+@media only screen and (max-width: 900px) {
+  .navbar .rightSide a {
+    width: 70px;
   }
+  .navbar .leftSide {
+    padding-left: 50px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar .rightSide a {
+    display: none;
+  }
+
+  .navbar .rightSide {
+    justify-content: flex-end;
+    padding-right: 50px;
+  }
+
+  .navbar .rightSide button {
+    display: inherit;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .navbar .rightSide button {
+    display: none;
+  }
+
+  .hiddenLinks {
+    display: none;
+  }
+}
