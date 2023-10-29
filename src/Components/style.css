@@ -12,19 +12,26 @@ body{
 
 .container{
     width: 90%;
+    height: 90vh;
+    padding-bottom: 20px;
     margin: auto;
-    padding-top: 100px;
+    padding-top: 200px;
     display: flex; 
 }
 
 .left-content.right-content{
     flex: 50%;
+
 }
 
 .left-content{
+    height: 80vh;
+    width: 25%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px,0.5fr));
     grid-gap: 2rem;
+    padding-left: 100px;
+    overflow-y: scroll;
 }
 
 .right-content{
@@ -32,7 +39,7 @@ body{
     text-align: center;
     color: black;
     position: fixed;
-    top: 100px;
+    top: 200px;
     right: 100px;
 
 }
@@ -67,10 +74,10 @@ body{
 }
 
 .abilities{
-    width: 30%;
+    width: 80%;
     margin: auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     margin-top: 1rem;
 }
@@ -83,9 +90,8 @@ body{
     border-radius: 8px;
 }
 
-.base-stat{
+.base-set{
     margin-top: 2rem;
-
 }
 
 .btn-group{
@@ -95,12 +101,129 @@ body{
 .btn-group button{
     outline: none;
     border: none;
-    padding: 0.3rem 0;
+    padding: 0.6rem 0;
     margin: 1rem;
-    font-size: 17px;
+    font-size: 25px;
     font-weight: bold;
     color: rgb(255, 255, 255);
-    background-color: rgb(55, 138, 233);
+    background-color: rgb(24, 70, 122);
     border-radius: 8px;
 
 }
+
+/*Navbar*/
+.navbar {
+    width: 100%;
+    height: 100px;
+    background-color: #121619;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+  }
+  
+  .navbar .leftSide {
+    flex: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 150px;
+  }
+  
+  .navbar .leftSide img {
+    width: 70px;
+  }
+  
+  .navbar .rightSide {
+    flex: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 20px;
+  }
+  
+  .navbar .rightSide button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .navbar .rightSide svg {
+    font-size: 40px;
+  }
+  
+  .navbar #open {
+    padding-left: 0px;
+  }
+  .navbar #open img {
+    display: none;
+  }
+  
+  .navbar #close img {
+    display: inherit;
+  }
+  
+  .navbar #open .hiddenLinks {
+    display: inherit;
+    margin-left: 30px;
+  }
+  
+  .navbar #close .hiddenLinks {
+    display: none;
+  }
+  
+  .navbar #open a {
+    width: 70px;
+    margin: 5px;
+  }
+  @media only screen and (max-width: 900px) {
+    .navbar .rightSide a {
+      width: 70px;
+    }
+    .navbar .leftSide {
+      padding-left: 50px;
+    }
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .navbar .rightSide a {
+      display: none;
+    }
+  
+    .navbar .rightSide {
+      justify-content: flex-end;
+      padding-right: 50px;
+    }
+  
+    .navbar .rightSide button {
+      display: inherit;
+    }
+  }
+  
+  @media only screen and (min-width: 600px) {
+    .navbar .rightSide button {
+      display: none;
+    }
+  
+    .hiddenLinks {
+      display: none;
+    }
+
+    /*Footer*/
+    .footer {
+      width: 100%;
+      height: 200px;
+      background-color: #121619;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding-top: 10px;
+    }
+  }

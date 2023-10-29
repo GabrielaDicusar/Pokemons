@@ -3,6 +3,7 @@ import axios from 'axios';
 import Card from './Card';
 import Pokeinfo from './Pokeinfo';
 
+
 const Main=() =>{
     const [pokeData, setPokeData] = useState([]); 
     const [loading, setLoading] = useState(true);
